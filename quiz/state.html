@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Servlet</title>
+</head>
+<body>
+<h1>State Management Quiz</h1>
+<p align="left">
+    1. Can post requests be bookmarked? What are the problems?
+<blockquote>
+    ANSWER: A POST cannot be bookmarked. Attempting to bookmark a POST will just result in a GET operation on the URL.
+    There's a very good reason for this, GET requests are supposed to be idempotent - that is, making the same GET
+    request numerous times should result in the same response. POST requests on the other hand are not.
+</blockquote>
+    2. What is the purpose of request dispatching?
+<blockquote>
+    ANSWER: Request Dispatcher is an interface whose implementation defines an object which can dispatch the request
+    to any resources on the server. ... RequestDispatcher interface is used to forward or include the response of a
+    resource in a Servlet.
+</blockquote>
+    3. What is the difference between redirect and request dispatch?
+<blockquote>
+    ANSWER: A RequestDispatcher forward() is used to forward the same request to another resource whereas ServletResponse
+    sendRedirect() is a two step process. In sendRedirect(), web application returns the response to client with status
+    code 302 (redirect) with URL to send the request.
+</blockquote>
+    4. What is an attribute ?
+<blockquote>
+    ANSWER: An object bound into one of the three servlet API objects
+        -HttpServletRequest
+        -HttpSession
+        -ServletContext
+    Is a name value pair
+        -value has type Object
+        -name is String
+</blockquote>
+    5. What is the difference between attributes and parameters?
+<blockquote>
+    ANSWER: Attribute and parameter are two terms associated with programming. ... The difference between attribute
+    and parameter is that an attribute is a variable of any type that is declared directly in a class while a
+    parameter is a variable defined by the function that receives a value when it is called.
+</blockquote>
+    6. What are dangers of using attributes?
+<blockquote>
+    ANSWER: Attributes are shared by every servlet and every request in the application and have to be careful, not thread safe.
+</blockquote>
+    7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+<blockquote>
+    ANSWER: HTTP is called as a stateless protocol because each request is executed independently, without any knowledge of
+    the requests that were executed before it, which means once the transaction ends the connection between the browser and
+    the server is also lost.
+</blockquote>
+    8. Give 5 different methods for maintaining state information (count each attribute scope as one
+    method).
+<blockquote>
+    ANSWER:
+    1. Request scope: destroyed when servlet finishes processing request
+    2. Session scope: destroyed when user closes browser
+    3. Application scope destroyed when Container stopped.
+    4. Cookies saved on browser, temporary (deleted when the browser closes) or permanent.
+    5. Hidden fields on a form.
+</blockquote>
+    9. How long does a session last?
+<blockquote>
+    ANSWER: If there is not session-timeout defined in web.xml configuration, the container decides this setting.
+    This setting decides how long a session last.
+</blockquote>
+    10. What is a cookie, and how long does a cookie last?
+<blockquote>
+    ANSWER: An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small piece
+    of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing.
+    There are 2 types:
+        -Temporary cookie: browser removes when it closes
+        -Permanent cookies: cookies that has max age set.
+</blockquote>
+    11. What is the purpose of URL rewriting?
+<blockquote>
+    ANSWER: URL rewriting is the process of modifying Uniform Resource Locators (URLs) for various purposes.
+    The URL as a “web address” is a string that, when entered into the browser bar field, directs the browser
+    to move to a given site and page. ... URL rewriting is also known as URL manipulation.
+</blockquote>
+    12. Why does the request attribute report ‘null’ for the maintaining state demo?
+<blockquote>
+    ANSWER: Because the web server build the request object, then pass to web container. Then if setting
+    the attribute to the request object, it will not be copied to the client. Request scope is destroyed
+    when servlet finishes processing request.
+</blockquote>
+</p>
+</body>
+</html>

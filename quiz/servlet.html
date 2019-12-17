@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Servlet</title>
+</head>
+<body>
+<h1>Introduction to Servlets Quiz</h1>
+<p align="left">
+    1. What is the difference between a web server and a web container?<br>
+<blockquote>
+    ANSWER: Typically, a Web server refers to an execution infrastructure that handles HTTP requests and responses;
+    a servlet container refers to a component that handles the lifecycle for servlets; an application server
+    refers to a framework (servlet container, EJB container, JSP engine, MQ container, etc.)
+</blockquote>
+2. What is a servlet?<br>
+<blockquote>
+    ANSWER: A servlet is a Java class that extends the capabilities of
+    servers that host applications access by means of a
+    request-response programming model.
+</blockquote>
+3. How do web servers and web containers interact with servlets?<br>
+<blockquote>
+    ANSWER: A web container handles requests to servlets, that include server-side code.
+    The Web container creates servlet instances, loads and unloads servlets,
+    creates and manages request and response objects, and performs other servlet-management tasks.
+</blockquote>
+4. Who creates request objects?<br>
+<blockquote>
+    ANSWER: Search Results
+    Featured snippet from the web
+    When a client sends a request to the web server, the servlet container creates ServletRequest & ServletResponse
+    objects and passes them as an argument to the servlet's service() method. The request object provides the access
+    to the request information such as header and body information of request data.
+</blockquote>
+5. What are the states in the servlet lifecycle?<br>
+<blockquote>
+    ANSWER: Servlet states: Load, Create, Init, Service, Destroy
+</blockquote>
+6. Who calls init and when?<br>
+<blockquote>
+    ANSWER: Servlet container calls init to initialize a servlet. The init() is called when servlet is created.
+</blockquote>
+7. Which of init, service, and doGet should you override?<br>
+<blockquote>
+    ANSWER: Override init() method to do some initialization when the server created.
+    service() is the main method to perform the actual task. The servlet container calls the service() method
+    to handle requests coming from the client( browsers) and to write the formatted response back to the client.
+    Override it to do some common operations when handling incoming request.
+    doGet method is called when there is GET request comes and servlet needs to handle. We often override doGet
+    and doPost to handle GET request from client.
+</blockquote>
+8. In what sense are servlets multi-threaded?<br>
+<blockquote>
+    ANSWER: This means a single instance can be accessed by more than one thread. If a servlet implements
+    the SingleThreadModel interface, the container will not execute the service () method in more than one
+    thread simultaneously.
+</blockquote>
+9. What are the implications of this for servlet instance variables?<br>
+<blockquote>
+    ANSWER: Using this to access servlet instance variable, but just can be executed by threads launched by servlet container.
+</blockquote>
+</p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Scope Exercises</title>
+</head>
+<body>
+<h1>JS Scope Exercises</h1>
+<p>
+    1. Determine what this Javascript code will print out (without running it):<br>
+    x = 1;<br>
+    var a = 5;<br>
+    var b = 10;<br>
+    var c = function(a, b, c) {<br>
+    var x = 10;<br>
+    document.write(x);<br>
+    document.write(a);<br>
+    var f = function(a, b, c) {<br>
+    b = a;<br>
+    document.write(b);<br>
+    b = c;<br>
+    var x = 5;<br>
+    }<br>
+    f(a,b,c);<br>
+    document.write(b);<br>
+    }<br>
+    c(8,9,10);<br>
+    document.write(b);<br>
+    document.write(x);<br>
+    }<br>
+    <b>ANSWER: </b>10889101<br>
+    2. What is the difference between a method and function?<br>
+    <b>ANSWER: </b> In short: a method is a function that belongs to a class. In JavaScript, however,<br>
+    a method is a function that belongs to an object. Everything in JavaScript is an object; br>
+    a function is an object; an Array is an object.br>
+    3. What does 'this' refer to when used in a Java method?<br>
+    <b>ANSWER: </b>this is a keyword in Java. It can be used inside the method or constructor of a class. <br>
+    It(this) works as a reference to the current object, whose method or constructor is being invoked. <br>
+    This keyword can be used to refer to any member of the current object from within an instance method or a constructor.<br>
+    4. What does 'this' refer to when used in a JavaScript method?<br>
+    <b>ANSWER: </b>“this” Refers to an Invoker Object (Parent Object)<br>
+    In JavaScript, the property of an object can be a method or a simple value. When an object's method is invoked,<br>
+    then this refers to the object which contains the method being invoked.<br>
+    5. What does 'this' refer to when used in a JavaScript constructor function?<br>
+    <b>ANSWER: </b>In JavaScript, the thing called this is the object that "owns" the code. The value of this,<br>
+    when used in an object, is the object itself. In a constructor function this does not have a value.<br>
+    It is a substitute for the new object.<br>
+    6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.<br>
+    When f is called by x.f( ), what does 'this' refer to?<br>
+    <b>ANSWER: </b> The 'this' refers to object x.<br>
+    7. What is a free variable in JavaScript?<br>
+    <b>ANSWER: </b> In javascript closures, those are simply the variables that the function takes (read and write)<br>
+    in the enclosing scope where is declared the closure or in a parent scope.<br>
+    8. Create an object that has properties with name = "fred" and major="music" and a property that is a function<br>
+    that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.<br>
+    <b>ANSWER: </b> var object = {<br>
+        name: 'fred',<br>
+        major: 'music',<br>
+        method: function(a,b){<br>
+            if(a===b) return a*a + b*b;<br>
+                if(a>b) return b;<br>
+                else return a;<br>
+        }<br>
+    }<br>
+    9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.<br>
+    Employee objects have the following fields: name, salary, position.<br>
+    <b>ANSWER: </b> function employee(name, salary, position){<br>
+    this.name = name;<br>
+    this.salary = salary;<br>
+    this.position = position;<br>
+    }<br>
+    var emp1 = new employee('emp1','1','p1');<br>
+    var emp2 = new employee('emp2','1','p2');<br>
+    var emp2 = new employee('emp3','3','p3');<br>
+    10. Write a Javascript function that takes any number of input arguments and returns the product of the<br>
+    arguments.<br>
+    <b>ANSWER: </b>function func1 (...more){<br>
+        more.forEach(document.write(more))<br>
+    }<br>
+    11. Write an arrow function that returns the maximum of its three input arguments.<br>
+    <b>ANSWER: </b> var test = (a,b,c) => Math.max(a,b,c); <br>
+</p>
+</body>
+</html>

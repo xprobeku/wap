@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Servlet</title>
+</head>
+<body>
+<h1>JSP Introduction Quiz</h1>
+<p align="left">
+    1. What is the main value of Java Server Pages?
+<blockquote>
+    ANSWER: Separation of static and dynamic contents: The dynamic contents are generated via programming logic and
+    inserted into the static template. This greatly simplifies the creation and maintenance of web contents.
+</blockquote>
+2. How are JSP pages related to servlets?
+<blockquote>
+    ANSWER: Great hosting offer for jsp and serlvet hosting All those environment issues dealing with compiling and
+    executing servlets come into play. Whereas you don't compile JSPs, your Java-enabled server performs the compilation
+    from JSP page into a Java servlet for you.
+</blockquote>
+3. How are JSP pages related to HTML?
+<blockquote>
+    ANSWER: Jsp is html with a little java mixed in. There are two types of data in a JSP page: Template Data, JSP Elements.
+</blockquote>
+4. Give an example of a JSP scriptlet and show how it will look in the JSP servlet.
+<blockquote>
+    ANSWER:
+    <html>
+    <head><title>First JSP</title></head>
+    <body>
+    <% double num = Math.random(); out.print%>
+    <% out.print("Random:"+Math.random()); %>
+    </body>
+    </html>
+</blockquote>
+5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+<blockquote>
+    ANSWER: <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+</blockquote>
+6. Give an example of a JSP comment and show how it will look in the JSP servlet.
+<blockquote>
+    ANSWER:  <%-- This is a JSP comment --%>
+</blockquote>
+7. Give an example of a JSP expression and show how it will look in the JSP servlet.
+<blockquote>
+    ANSWER: <%= ((Person) request.getAttribute("person”)).getDog().getName() %>
+</blockquote>
+8. Give an example of a JSP directive and show how it will look in the JSP servlet.
+<blockquote>
+    ANSWER: <%@ page import="java.util.Iterator" %>
+</blockquote>
+9. Explain how an EL expression is evaluated.
+<blockquote>
+    ANSWER: These two operators allow you to access various attributes of Java Beans
+    and built-in JSP objects. When the JSP compiler sees the ${} form in an attribute,
+    it generates code to evaluate the expression and substitues the value of expresson.
+    ... If it is false, EL expressions are evaluated by the container.
+</blockquote>
+10. Explain how servlet attributes are involved in EL expressions.
+<blockquote>
+    ANSWER: The EL expression will search the object in all scopes in this order:
+    - Page
+    - Request
+    - Session
+    - Application
+</blockquote>
+11. Explain how servlets and JSPs use request dispatch to interact.
+<blockquote>
+    ANSWER: The RequestDispatcher interface provides the facility of dispatching the request
+    to another resource it may be html, servlet or jsp. This interface can also be used to include
+    the content of another resource also. It is one of the way of servlet collaboration.
+
+    There are two methods defined in the RequestDispatcher interface.
+    -forward method
+    -include method
+</blockquote>
+</p>
+</body>
+</html>

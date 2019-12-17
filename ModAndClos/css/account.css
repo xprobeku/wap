@@ -1,0 +1,10 @@
+body{
+    font: bold 12pt sans-serif;
+    display: flex;
+    flex-flow: column;
+}
+.bodyMain{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+}

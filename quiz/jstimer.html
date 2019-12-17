@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Timer Exercises</title>
+</head>
+<body>
+<p>1. What is the difference between the following 2 statements?<br>
+    setTimeout(booyah, 2000);<br>
+    setTimeout(booyah(), 2000);<br>
+<blockquote>
+    <span style="font-weight: bold">ANSWER: </span> #1: Wait for 2000ms then calling the function
+    #2: calling the function immediately
+</blockquote>
+</p>
+<p>
+2. What do the following 2 alerts display (answer without running the code)?<br>
+var myfunc = function(a, x) {<br>
+return a * x;<br>
+};<br>
+var x = myfunc(2, 3);<br>
+var y = myfunc;<br>
+alert(x);<br>
+alert(y(2,3));<br>
+<blockquote>
+    <span style="font-weight: bold">ANSWER: </span> Both shows "6"
+</blockquote>
+</p>
+<p>
+3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!”<br>
+setTimeout(booyah1, 2000);<br>
+setTimeout(booyah2(), 2000);<br>
+<blockquote>
+    <span style="font-weight: bold">ANSWER: </span>
+    var booyah1 = function() {
+    alert("BOOYAH!")
+    }
+
+    var booyah2 = function() {
+    setTimeout(booyah1, 2000);
+    }
+</blockquote>
+</p>
+<p>
+4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+for using it)?<br>
+<blockquote>
+    <span style="font-weight: bold">ANSWER: </span>
+    Unobtrusive JavaScript code:
+    • HTML with minimal JavaScript inside
+    • uses the DOM to attach and execute all JavaScript functions
+
+    Application: separation of web site into 3 major categories:
+    • content (HTML) - what is it?
+    • presentation (CSS) - how does it look?
+    • behavior (JavaScript) - how does it respond to user interaction?
+</blockquote>
+</p>
+</body>
+</html>
